@@ -196,3 +196,45 @@ This is the new command list which is all utilities that have been added **THIS 
 
 ```
 
+# Installing 
+
+Installing this script it not to hard, it may be lengthy but here are general requirements before running and installing the script 
+
+> System MUST be linux, tools and operations are fit specifically for a linux system however you are welcome to test this on windows 
+> User MUST be root, this is because the script operations and tools all mostly require OS ROOT previledges, such as network sniffing 
+> Perl, you WILL need perl for this since the makefile is made out of perl.
+
+Here is a link or auto run for everything
+
+
+`git clone https://www.github.com/ArkAngeL43/Red-Rabbit-V4.git ; cd Red-Rabbit-V4 ; sudo perl Makefile.pl`
+
+you will see a very technical output which will tell you if the installs re by the OS or EXEC and with the use of CPAN will tell you if installs were OK by going through all .t and .pod files. 
+
+IF you do NOT run the perl makefile install with root then you will not be able to properly install red rabbit since the perl libraries and modules MUST be transfered to one of the following @INC file paths 
+
+```
+@INC (you may need to install the mainpm module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.32.1 /usr/local/share/perl/5.32.1 /usr/lib/x86_64-linux-gnu/perl5/5.32 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.32 /usr/share/perl/5.32 /usr/local/lib/site_perl)
+```
+
+
+
+here is an example output of what messages you will get when you cant transfer the file
+
+```
+[+] Operation: (Running) Install modules
+[+] Operation: (Setting) /home/reaper/Desktop/RR6
+[+] Operation: (Running) Prepping for install...
+[+] Operation: (Setting) Checking modules....
+[+] Operation: Sending modules/perl/mod/OFSL.pm -> /usr/share/perl5
+cp: cannot create regular file '/usr/share/perl5/OFSL.pm': Permission denied
+[+] Operation: Sending modules/perl/mod/TABLE.pm -> /usr/share/perl5
+cp: cannot create regular file '/usr/share/perl5/TABLE.pm': Permission denied
+[+] Operation: Sending modules/perl/mod/BRUTE.pm -> /usr/share/perl5
+cp: cannot create regular file '/usr/share/perl5/BRUTE.pm': Permission denied
+[+] Operation: (Testing) Checking if files transfered.......................
+[+] Operation: (Testing) FILENAME - /usr/share/perl5/TABLE.pm - Has sucessfully been transfered......
+[+] Operation: (Testing) FILENAME - /usr/share/perl5/BRUTE.pm - Has sucessfully been transfered......
+[+] Operation: (Testing) FILENAME - /usr/share/perl5/OFSL.pm - Has sucessfully been transfered......
+
+```
