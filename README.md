@@ -233,8 +233,30 @@ cp: cannot create regular file '/usr/share/perl5/TABLE.pm': Permission denied
 [+] Operation: Sending modules/perl/mod/BRUTE.pm -> /usr/share/perl5
 cp: cannot create regular file '/usr/share/perl5/BRUTE.pm': Permission denied
 [+] Operation: (Testing) Checking if files transfered.......................
-[+] Operation: (Testing) FILENAME - /usr/share/perl5/TABLE.pm - Has sucessfully been transfered......
-[+] Operation: (Testing) FILENAME - /usr/share/perl5/BRUTE.pm - Has sucessfully been transfered......
-[+] Operation: (Testing) FILENAME - /usr/share/perl5/OFSL.pm - Has sucessfully been transfered......
-
+[+] Operation: (Testing) FILENAME - /usr/share/perl5/TABLE.pm - TEST: FAILED FILE IS IN DANGER OF NOT BEING INSTALLED
+[+] Operation: (Testing) FILENAME - /usr/share/perl5/BRUTE.pm - TEST: FAILED FILE IS IN DANGER OF NOT BEING INSTALLED
+[+] Operation: (Testing) FILENAME - /usr/share/perl5/OFSL.pm  - TEST: FAILED FILE IS IN DANGER OF NOT BEING INSTALLED
 ```
+
+all libraries and installs are absolutely mandatory
+
+
+# Sub information 
+
+> What has changed in terms of code and why was this better than pre alpha
+
+Pre alpha was a very unsecure, unstable, broken, glitchy and very horribly written script which is why i NEEDED to rewrite it, however i ensure you this version is much much more better and here is a list of changes and why this version is better 
+
+
+```go
+Uses more modules: With the use of modules i was able to make the code alot more organized and imported into the new main script running the terminal / console
+
+Less languages: Pre alpha used Ruby, Perl, Go, Rust, C, LASM, HTML, CSS, JS and many other languages that were not needed so i simply took three languages that would fit best for this project which was ruby, go, and perl. i simply chose these because i needed a script that was going to be good, adn with my knowledge in go i was able to make this script faster, more robust, less glitchy, easily controllable, comfortable, and easy to install. 
+
+Code is more robust: with the use of modules, structures, classes, and types i was able to make the console or user IO completely robust and really fast, despite it being built wacky instead of a thousand if statements i used switch methods and key info and strucutures to ensure that this console is fast and stable rather than hogging resources
+
+Code is more lightweight: Speaking of resources there has been a major change in resource usage, pre alpha would RUIN your cpu and would actually sometimes even cause a crash in the cpu which would never end, it was not until someone posted about it when i was able to fix it momentarily. With this new version i was able to make an equation which represented the usage that pre alpha was using and use that equation to better this new version and make it less of a resource hog and more of a even source hogger, with some time delays and even threading for the console which is built into the script. This also means less bugs, less glitches, less time spent waiting for something to happen, and less time trying to figure out the bugs in this version. 
+
+Code is more organized: in the future i want to keep updating this project with more utilties and have people read and look at this code, so in order to do this i have created alot of files with their seperate code files in them, where all of them do not use github links and rather individual paths
+```
+
