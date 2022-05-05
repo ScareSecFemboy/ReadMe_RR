@@ -54,4 +54,4 @@ This project has alot to offer especially when it comes to offensive cyber secur
 
 Before i start this section i would like to say something that ALOT of people missed in the pre alpha version, in red rabbit version 1.0 there is a command called `start document server` which means it will start the offical red rabbit web server, once it starts the server you will be brought to this window on `localhost:8080` 
 
-
+![alt text](git/cipherlogger.png)
