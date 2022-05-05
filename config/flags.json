@@ -1,0 +1,124 @@
+{
+    "Flags": [
+        {
+            "Flag": "--ph",
+            "Description": "Used for the stego module, when the file you input does not exist and you use the command perl <imgformat> ex: perl PNG, this will be used to set the pixel height and width of the new image",
+            "Category": "Stegonography" 
+        },
+        {
+            "Flag": "--pw",
+            "Description": "Same thing as --ph however this is the width",
+            "Category": "Stegonography" 
+        },
+        {
+            "Flag": "--jpgc or -p",
+            "Description": "Set a location chunk to inject data into a JPG image using the command perl JPG",
+            "Category": "Stegonography" 
+        },
+        {
+            "Flag": "--input or -i",
+            "Description": "Set a input file for hex dumping, loading, credential sniffing, logs, and more",
+            "Category": "General" 
+        },
+        {
+            "Flag": "--output or -o",
+            "Description": "Set a output filename for the stego modules, you would use this for anything like image injection that requires an output file",
+            "Category": "Stegonography" 
+        },
+        {
+            "Flag": "--meta",
+            "Description": "Set the meta tag to get metadata of a PNG image",
+            "Category": "Stegonography" 
+        },
+        {
+            "Flag": "--suppress or -s",
+            "Description": "Supress he chunk of hex data output when injecting PNG images",
+            "Category": "Stegonography" 
+        },
+        {
+            "Flag": "--offset",
+            "Description": "Specify the chunk offset location to inject data into a PNG image format",
+            "Category": "Stegonography" 
+        },
+        {
+            "Flag": "--payload",
+            "Description": "Specify the payload for image injection utility tools",
+            "Category": "Stegonography" 
+        },
+        {
+            "Flag": "--type",
+            "Description": "Set the specific chunk to inject for png image formats",
+            "Category": "Stegonography" 
+        },
+        {
+            "Flag": "--filepath",
+            "Description": "Specify a filepath for a filepath, an example usgae would be injecting a zip file, to do this you use the flags -i for the image to inject and --filepath /path/to/zip.zip to specify the zip file to inject into the image, then run the command 'inject zip' to inject the image",
+            "Category": "Stegonography and General" 
+        },
+        {
+            "Flag": "--rrh",
+            "Description": "Spawn a help menu for flags",
+            "Category": "General" 
+        },
+        {
+            "Flag": "--help",
+            "Description": "Spawn a general help menu",
+            "Category": "General" 
+        },
+        {
+            "Flag": "--reso",
+            "Description": "Specify your screen rotation for banner Type <Verticle|Landscape|>",
+            "Category": "General" 
+        },
+        {
+            "Flag": "--hashl",
+            "Description": "Specify a hash list for hash brute forcing and matching",
+            "Category": "Brute Forcing" 
+        },
+        {
+            "Flag": "--userl",
+            "Description": "Specify a user list for brute forcing",
+            "Category": "Brute Forcing" 
+        },
+        {
+            "Flag": "--wordl",
+            "Description": "Specify a wordlist for brute forcing",
+            "Category": "Brute Forcing" 
+        },
+        {
+            "Flag": "--workers",
+            "Description": "Set the amount of workers for brute forcing and hash matching",
+            "Category": "Brute Forcing" 
+        },
+        {
+            "Flag": "--packet",
+            "Description": "Specify the packet type to sniff for network sniffing modules -> ICMP, tcp, eth, ip, dhcmp, application, dot11 are the only formats supported",
+            "Category": "Networking" 
+        },
+        {
+            "Flag": "--interface",
+            "Description": "Specify the interface for modules that require one such as wifi sniffers and fake beacons",
+            "Category": "Networking" 
+        },
+        {
+            "Flag": "--targetm",
+            "Description": "Set a target mac address for arp poisoning",
+            "Category": "Networking" 
+        },
+        {
+            "Flag": "--targetip",
+            "Description": "Set a target IP address for arp poisoning",
+            "Category": "Networking" 
+        },
+        {
+            "Flag": "--gatemac",
+            "Description": "Set a target gateway mac address for arp poisoning",
+            "Category": "Networking" 
+        },
+        {
+            "Flag": "--CIDR or -z",
+            "Description": "Set a range for host scanning EX '192.168.8.1/24'",
+            "Category": "Networking" 
+        }
+    ]
+}
