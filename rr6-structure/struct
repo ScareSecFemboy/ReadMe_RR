@@ -1,0 +1,24 @@
+RR6's structure is pretty big, given the amount of files, commands, scripts, servers, files, config etc this needs kinda a write down of whats all happening 
+
+Files are the following
+
+Config      -> API keys and config files 
+install     -> Install RR6, and make file
+modules     -> Broken down into the instalable perl modules, the go modules, the go files, ruby files, and other dependant modules RR6 may use 
+scripts     -> Scripts are all of the possible scripts and weapons rr6 will run, which are broken down into category like wifi, exploits, bluetooth, etc etc
+text        -> All banners, help files, module files, pod files etc 
+server      -> The offical RR6 documentation server
+
+This structure over time will keep growing bigger and bigger meaning it will be harder to maintain, unless you are the dev of RR6 or a developer and helper of the RR6 development and 
+security team, you may delete this file.
+
+---------------- Sub information 
+
+Module languages -> Ruby, Perl
+
+Text and Doc     -> .in, .1, .pod
+
+Scripts and main -> Go, Ruby, perl, Text, MD, make, c
+
+
+
