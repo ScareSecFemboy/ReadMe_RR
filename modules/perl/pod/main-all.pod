@@ -1,0 +1,122 @@
+=head1 notes
+
+
+Disclaimer: All modules here were made and formed / designed by ArkAngeL43 
+
+
+This file will be all notes concerning other modules like table, ipath, and offensive security 
+libraries made and constructed by any developers of the Red Rabbit project 
+
+
+
+
+--------------------------------------------------------------
+- text table output 
+
+
+
+The text table or TABLE perl module has a bug which should be fixed 
+to assume user credit, when using box drawing characters standard to 
+
+DOS or UNIX like systems meaning the following characters 
+
+
+
+
+Box Drawing[1]
+Official Unicode Consortium code chart (PDF)
+ 	0	1	2	3	4	5	6	7	8	9	A	B	C	D	E	F
+U+250x	─	━	│	┃	┄	┅	┆	┇	┈	┉	┊	┋	┌	┍	┎	┏
+U+251x	┐	┑	┒	┓	└	┕	┖	┗	┘	┙	┚	┛	├	┝	┞	┟
+U+252x	┠	┡	┢	┣	┤	┥	┦	┧	┨	┩	┪	┫	┬	┭	┮	┯
+U+253x	┰	┱	┲	┳	┴	┵	┶	┷	┸	┹	┺	┻	┼	┽	┾	┿
+U+254x	╀	╁	╂	╃	╄	╅	╆	╇	╈	╉	╊	╋	╌	╍	╎	╏
+U+255x	═	║	╒	╓	╔	╕	╖	╗	╘	╙	╚	╛	╜	╝	╞	╟
+U+256x	╠	╡	╢	╣	╤	╥	╦	╧	╨	╩	╪	╫	╬	╭	╮	╯
+U+257x	╰	╱	╲	╳	╴	╵	╶	╷	╸	╹	╺	╻	╼	╽	╾	╿
+Notes
+1.^ As of Unicode version 14.0
+
+in banners like 
+
+
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│    ___o .--.               ____                                          ____                                      __                      ___o .--.    │
+│   /___| |--|              /\  _`\                                       /\  _`\                                 __/\ \__                  /___| |OO|    │
+│  /'   |_|  |_             \ \,\L\_\    ___     __     _ __    __        \ \,\L\_\     __    ___   __  __  _ __ /\_\ \ ,_\  __  __        /'   |_|  |_   │
+│       (_    _)             \/_\__ \   /'___\ /'__`\  /\`'__\/'__`\  __o__\/_\__ \   /'__`\ /'___\/\ \/\ \/\`'__\/\ \ \ \/ /\ \/\ \           (_     _)  │
+│       | |   \                /\ \L\ \/\ \__//\ \L\.\_\ \ \//\  __/    |    /\ \L\ \/\  __//\ \__/\ \ \_\ \ \ \/ \ \ \ \ \_\ \ \_\ \           | |   \   │
+│       | |___/                \ `\____\ \____\ \__/.\_\\ \_\\ \____\  / \   \ `\____\ \____\ \____\\ \____/\ \_\  \ \_\ \__\\/`____ \          | |___/   │
+│                               \/_____/\/____/\/__/\/_/ \/_/ \/____/  _______\/_____/\/____/\/____/ \/___/  \/_/   \/_/\/__/ `/___/> \                   │
+│                                                                     /\______\                                                  /\___/                   │
+│                                                                     \/______/                                                  \/__/                    │
+│                                                                                                                                                         │ 
+│           Professional Digital forensics, Network hacking, Stegonography, Recon, OSINT, Bluetooth, CAN and Web Exploitation Expert Secruity Team        │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+which uses the UNIX UNICODE STANDARD CHART 
+
+the table can cause format and encoding errors, when outputting a table despite the table 
+itself using these characters, it will cause format output errors or bugs where it will mess 
+up banners coming from text files being read by both perl or go, for some reason you will get 
+something like this 
+
+
+ï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âvv
+ï¾ï¿£â½ï¿£)ï¸»â³â
+ï¾ï¿£â½ï¿£)ï¸»â³â
+ï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³â
+ï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³â
+ï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³â
+ï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³âï¾ï¿£â½ï¿£)ï¸»â³â
+
+this will cover the entire screen and even overflow and leak into the go input, so, in order to fix this 
+or ignore this formatting error, we should use a banner that is standard like this 
+
+
+   __          _         __       _     _     _ _              __   
+  /__\ ___  __| |       /__\ __ _| |__ | |__ (_) |_    /\   /\/ /_  
+ / \/// _ \/ _` |_____ / \/// _` | '_ \| '_ \| | __|___\ \ / / '_ \ 
+/ _  \  __/ (_| |_____/ _  \ (_| | |_) | |_) | | ||_____\ V /| (_) |
+\/ \_/\___|\__,_|     \/ \_/\__,_|_.__/|_.__/|_|\__|     \_/  \___/ 
+                                                                    
+
+Which go should manually end up returning the normal encoding itself and prevent it from flowing into the 
+user input, this is a major bug and can create security vulnerabilities, so this for sure needs to be fixed 
+
+if not fix trash any output asides tables that may use the OUCCC ( OFFICAL UNICODE CONSORTIUM CODE CHART )
+
+
+Err and bug #2 (FIXED): 
+   Wide character in print at TABLE.pm line 91, <FH> line 20.
+
+Common out from strict
+
+e character in print at TABLE.pm line 91, <FH> line 20.
+├─────────────╫───────────┤
+Wide character in print at TABLE.pm line 91, <FH> line 20.
+│1            ║dfgdfgdfgdf│
+Wide character in print at TABLE.pm line 91, <FH> line 20.
+├─────────────╫───────────┤
+Wide character in print at TABLE.pm line 91, <FH> line 20.
+│1            ║    df     │
+Wide character in print at TABLE.pm line 91, <FH> line 20.
+├─────────────╫───────────┤
+Wide character in print at TABLE.pm line 91, <FH> line 20.
+│1            ║dfgdfgdfgdf│
+Wide character in print at TABLE.pm line 91, <FH> line 20.
+└─────────────╨───────────┘
+
+Format will mess up, slution was declaring binmode 
+
+
+' 
+
+binmode STDOUT, ':encoding(utf8)';
+
+'
+
+---------------------------------------------------------------
+
+
+=cut

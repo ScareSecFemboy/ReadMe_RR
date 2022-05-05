@@ -1,0 +1,19 @@
+=head1 NOTES_OFSL 
+
+
+Dev note #1:
+    If you are working on the OFSL perl module 
+    do note at the first global set of variables 
+    in no case should GETOPT, ARG, ARGV, shift, my shift, push 
+    or any form of argument value or library take place, or else r6.pl 
+    will give the warning 
+
+    Use of uninitialized value <value> in print at r6.pl line <line number>.
+
+Same warning will pop up if the use of option o is not used yet wants to print or is set to print 
+
+Note:
+    This will not cause errors 100% to satop compiling however it can conflict later outputs and statement or in this case hurt the output     
+
+
+=cut

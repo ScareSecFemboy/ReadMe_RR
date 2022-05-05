@@ -1,0 +1,33 @@
+=head1 INSTALLS
+
+
+Install path direction:
+        Dev:
+        
+All modules should be installed in all of the following INC paths 
+
+INC: 
+/etc/perl 
+/usr/local/lib/x86_64-linux-gnu/perl/5.32.1 
+/usr/local/share/perl/5.32.1 
+/usr/lib/x86_64-linux-gnu/perl5/5.32 
+/usr/share/perl5 
+/usr/lib/x86_64-linux-gnu/perl-base 
+/usr/lib/x86_64-linux-gnu/perl/5.32 
+/usr/share/perl/5.32 
+/usr/local/lib/site_perl
+
+
+Module names installed in:
+    Module OFSL installed in: /usr/share/perl5
+
+        command:
+            sudo cp OFSL.pm -R /usr/share/perl5
+    
+    Module TABLE installed in: /usr/share/perl5
+        command:
+            sudo cp TABLE.pm -R /usr/share/perl5
+    
+
+
+=cut

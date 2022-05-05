@@ -1,0 +1,52 @@
+=head1 MODULE_STRUCTURE
+
+This module is a module written for the offical RR6 rewrite project 
+
+The OFS ( offensive Security Library ) is a compiliation of many methods of attacks 
+
+that will be easily called from one main perl file which will be called by RR6
+
+This will include alot of the following attacks
+
+#                   Hash attacks
+#                   Network attacks
+#                   Brute force attacks
+#                   Open Source Inteligence scripts
+#                   Domain name recon
+#                   Web application attacks 
+#                   Vulnerability scanners (web)
+#                   Social Engineering 
+#                   Metadata miners
+#                   Metadata and EXIF extractors
+#                   ZIP file brute forcers
+#                   Denial of service attacks
+#                   Hex and string converters
+#                   Binary Scanners
+#                   Shellcode generators
+#                   Port and network scanners
+#                   OUI lookups
+#                   File injectors
+#                   File encryption
+#                   etc.....
+
+This will be where alot of the major offline and online attacks will be called from 
+simply because the tools i chose to put into RR6 were already written in perl and make 
+it alot better and eaiser than say something like python or rubym given i also know perl to 
+a large amount i would rather write alot of the attacks in this module and language than in python or
+ruby or crystal or C
+
+=cut
+
+
+=head2 
+
+Structer of this library:
+    will start out with offline attacks and progress into system attacks, then finalize with online attacks and example is the following 
+
+    MD5 brute forcing, hash attacks, scanners, file grabbers, text output, text and file manipulation, payload generators 
+    |
+    |-> System exploits like dirty cow and file sniffers and vulnerability scanners
+                                |
+                                |-> SQLI, PHPI, Reverse shells, Online payload generators, log cleaners, defacers, DOS, DDOS, Network attacks, 802.11 attacks etc 
+
+=cut

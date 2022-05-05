@@ -1,0 +1,64 @@
+=head1 R6.pl 
+
+------------------- WORKING CODE 
+
+
+use Getopt::Std;
+use strict;
+use warnings;
+
+
+my %opts = (
+);
+
+getopt('f:', \%opts);
+
+my $filename = $opts{f};
+
+print $filename;
+
+
+
+
+
+
+
+
+
+
+
+
+=head1 GLOBALS
+
+my $CPU_FILE               = "/proc/cpuinfo";
+my $base_help_DIR_FILE     = "/txt/help.txt";
+my $base_banner_DIR_FILE   = "/txt/banner.txt";
+my $asm                    = "/asm-source/core";
+my $blue                   = "\033[34m";
+my $Bold_Blue              = "\033[1;34m";
+my $red                    = "\033[31m";
+my $wht                    = "\033[37m";
+my $BLK                    = "\033[0;30m";
+my $RED                    = "\033[0;31m";
+my $GRN                    = "\033[0;32m";
+my $YEL                    = "\033[0;33m";
+my $BLU                    = "\033[0;34m";
+my $MAG                    = "\033[0;35m";
+my $CYN                    = "\033[0;36m";
+my $WHT                    = "\033[0;37m";
+my $clear_hex              = "\x1b[H\x1b[2J\x1b[3J";
+my $getdir                 = "getdir";
+my $basename               = File::Basename::basename($PROGRAM_NAME);
+my $abs_path               = Cwd::abs_path($PROGRAM_NAME);
+my $dirname                = File::Basename::dirname($abs_path);
+my $cwd                    = Cwd::cwd();
+my $execute                = $cwd.$asm;
+my $filehelpmain           = $cwd.$base_help_DIR_FILE;
+
+
+=cut
+
+
+
+
+=cut

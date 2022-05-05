@@ -1,0 +1,18 @@
+=head1 module_parser_main
+
+These are all current notes foir the module parser ruby file, choosing to do this in .pod just 
+to add the individual filenotes instead of .txt or .lst or whatever other file format 
+
+---------- variables 
+
+require_relative  | Require the filepaths
+to                | the striping and the spliting of the string argument 
+@ct               | this is the command type, if the command type is not ini it will not execute 
+@command          | the final parsing of the command
+
+
+
+
+
+
+=cut
