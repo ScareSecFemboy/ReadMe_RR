@@ -70,5 +70,129 @@ YOU CAN NOT HAVE ANY EXTRA SPACES OR THE PROGRAM WILL FAIL AND KICK YOU OUT OF T
 once you are done you will be brought to a web UI which shows all information on the red rabbit project such as mentions, inspirations, reasons to the project, history of the project, code bugs, developer notes and mainly the depths of the commands, how the utilities work and how you would use them since there is so much utilities i had to put it in some nicely formatted wiki and not in something like a readme `given how MASSIVE this framework goes`
 
 
+# New commands 
 
+This is the new command list which is all utilities that have been added **THIS IS NOT THE ACTUALL LIST OF ALL TOTAL COMMANDS GOTO THE WEB UI FOR MORE INFO OR TYPE `h, help, c, commands etc...`**
+
+```
+  ┌────┳────────────────────────┳────────────────────────────────────────────────────────────────────────────────────────┐
+  │ C  ┃ help verified          ┃ View all verified and working commands                                                 │
+  │ C  ┃ commands/h             ┃ View this help menu, sjowing general info                                              │
+  │ C  ┃ help flags             ┃ View all descriptions of flags                                                         │
+  │ C  ┃ help advanced          ┃ View all commands with advanced usages and examples                                    │
+  │ C  ┃ help commands          ┃ View all general commands and descriptions                                             │
+  │ C  ┃ help all               ┃ View all general commands and descriptions from config files                           │
+  │ C  ┃ script settings        ┃ View all settings/flag values that was used                                            │
+  │ C  ┃ clear                  ┃ Clear terminal output                                                                  │
+  │ C  ┃ cls                    ┃ Clear terminal output                                                                  │
+  │ C  ┃ exit                   ┃ Exit the script                                                                        │
+  │ C  ┃ time                   ┃ Get script time                                                                        │
+  │ C  ┃ stalk mac              ┃ Trace the OUI of a single mac, only one mac can be checked at a time                   │
+  │ C  ┃ stalk oui              ┃ Trace the OUI of every single mac in a list of macs                                    │
+  │ C  ┃ stalk hosts            ┃ Trace all hosts on a network given the first 3 octets (10.0.0)                         │
+  │ C  ┃ search head            ┃ Get the headers of a URL                                                               │
+  │ C  ┃ fetch titles           ┃ Get the direct title of a website                                                      │
+  │ C  ┃ fetch documents        ┃ Get all documents on the page (paths only)                                             │
+  │ C  ┃ fetch links            ┃ Get all links found in the HTML page                                                   │
+  │ C  ┃ search ns              ┃ Get the name servers of a domain name                                                  │
+  │ C  ┃ search mx              ┃ Get all the MX records from a domain name                                              │
+  │ C  ┃ search endpoint        ┃ Get the endpoint of a URL                                                              │
+  │ C  ┃ search ip              ┃ Get all hostnames of an IP address                                                     │
+  │ C  ┃ search txt             ┃ Get all TXT records of a domain name                                                   │
+  │ C  ┃ search hostname        ┃ Get the hostname of an IP                                                              │
+  │ C  ┃ search cname           ┃ Get the CNAME records of a domain name                                                 │
+  │ C  ┃ search srv             ┃ Get the SRV of a domain name requires an example server like xmpp-server and a domain  │
+  │ C  ┃ search robots          ┃ Get the robots.txt from a given URL                                                    │
+  │ C  ┃ search urls            ┃ Get all URLS, IPAS, Domain names, and servers of a URL that is crawled                 │
+  │ C  ┃ search banner          ┃ Get the banner of a hostname by making a TCP dial                                      │
+  │ C  ┃ search server          ┃ Get the server of a domain name or URL                                                 │
+  │ C  ┃ search ipa             ┃ Get the IP Address of a URL                                                            │ 
+  │ C  ┃ search route           ┃ Get the route or run a traceroute scan on a domain/url/host                            │
+  │ C  ┃ search admin           ┃ Scan the URL for admin panels or admin access                                          │
+  │ C  ┃ search sqli            ┃ Scan the URL for SQL injection vulnerabilities                                         │
+  │ C  ┃ search lfi             ┃ Scan the URL for LFI vulnerabilities                                                   │
+  │ C  ┃ search sig             ┃ Scan a unknown file to try and find its filetype                                       │
+  │ C  ┃ search filepath        ┃ Scan a filepath for a certian file                                                     │
+  │ C  ┃ search archive         ┃ Scan a JPG image for a archive file and try to unzip it                                │
+  │ C  ┃ search geo             ┃ Scan a JPG/JPEG file for a GEO location                                                │
+  │ C  ┃ inject zip             ┃ Inject a ZIP file / Archive file into a JPG/JPEG image                                 │
+  │ C  ┃ inject gif             ┃ Inject a given payload into a GIF image                                                │
+  │ C  ┃ inject jpg             ┃ Inject a given payload into a JPG/JPEG image                                           │
+  │ C  ┃ inject png             ┃ Inject a given payload into a PNG image                                                │
+  │ C  ┃ inject bmp             ┃ Inject a given payload into a BMP image                                                │
+  │ C  ┃ inject webp            ┃ Inject a given payload into a WEBP image                                               │
+  │ C  ┃ dump bootsec info      ┃ Dump your bootsec filename info                                                        │ 
+  │ C  ┃ dump file info         ┃ Dump normal file inforomation on a file                                                │
+  │ C  ┃ dump file info         ┃ Dump normal file inforomation on a file                                                │
+  │ C  ┃ dump file binary       ┃ Dump a given file into a hex/binary like output                                        │
+  │ C  ┃ dump pe info           ┃ Dump a PE/DLL file and get all of its general information and sections                 │
+  │ C  ┃ dump image metadata    ┃ Dump an image's metadata                                                               │
+  │ C  ┃ dump pcap dot11        ┃ Dump all BSSID's, SSID's, and macs in a DOT11 pcap file                                │
+  │ C  ┃ dump pcap ftp          ┃ Dump all found FTP username and passwords / credentials in a PCAP/CAP file             │
+  │ C  ┃ dump pcap ospf         ┃ Dump all found OSPF authentication bytes in a PCAP/CAP file                            │
+  │ C  ┃ dump pcap smtp         ┃ Dump all authentication/users/passwords in a normal SMTP PCAP/CAP file                 │
+  │ C  ┃ dump pcap smtppa       ┃ Dump all AUTH PLAIN logins made in a plain authentication SMTP PCAP/CAP file           │
+  │ C  ┃ dump pcap smtpe        ┃ Dump all email chats, users, and bodies in a SMTP PCAP/CAP file                        │
+  │ C  ┃ dump pcap sipa         ┃ Dump all users and passwords for SIP authentication found in a PCAP/CAP file           │
+  │ C  ┃ dump pcap sipok        ┃ Dump all +OK or OK responses in a SIP PCAP/CAP                                         │
+  │ C  ┃ dump pcap sipin        ┃ Dump all INVITES in a SIP PCAP/CAP file                                                │
+  │ C  ┃ dump pcap sipreg       ┃ Dump all Registers made in a SIP PCAP/CAP file                                         │
+  │ C  ┃ dump pcap sippg        ┃ Dump all POST and GET requests made in a SIP PCAP/CAP file                             │
+  │ C  ┃ dump pcap imaplogn     ┃ Dump all IMAP logins made in a IMAP PCAP/CAP file                                      │
+  │ C  ┃ dump pcap custom       ┃ Dump your own custom filters in any PCAP file self parsing and custom output           │
+  │ C  ┃ dump pcap              ┃ Dump all packets in a PCAP/CAP file UNFORMATTED                                        │
+  │ C  ┃ ping udp               ┃ Send out UDP pakcets to ping all living hosts                                          │
+  │ C  ┃ ping tcp               ┃ Send out TCP packets to ping all living hosts                                          │
+  │ C  ┃ ping syn               ┃ Send out SYN packets to ping all living hosts                                          │
+  │ C  ┃ ping icmp              ┃ Send out ICMP packets to ping all living hosts                                         │
+  │ C  ┃ ping arp               ┃ Send out ARP packets to identify living hosts on all interfaces by mac ADDR            │
+  │ C  ┃ crack sha1 list        ┃ Brute force all SHA1 hashes in a list                                                  │
+  │ C  ┃ crack sha256 list      ┃ Brute force all SHA256 hashes in a list                                                │
+  │ C  ┃ crack md5 list         ┃ Brute force all MD5 hashes in a list                                                   │
+  │ C  ┃ crack sha1 single      ┃ Brute force a single SHA1 hash                                                         │
+  │ C  ┃ crack sha256 single    ┃ Brute force a single SHA256 hash                                                       │
+  │ C  ┃ crack md5 single       ┃ Brute force a single MD5 hashes                                                        │
+  │ C  ┃ encode md5             ┃ Encode a string in a MD5 hash                                                          │
+  │ C  ┃ encode sha1            ┃ Encode a string in a SHA1 hash                                                         │
+  │ C  ┃ encode sha256          ┃ Encode a string in a SHA256 hash                                                       │
+  │ C  ┃ encode sha512          ┃ Encode a string in a SHA512 hash                                                       │
+  │ C  ┃ encode base64          ┃ Encode a string in a BASE64 string                                                     │
+  │ C  ┃ encode base32          ┃ Encode a string in a BASE32 string                                                     │
+  │ C  ┃ encode md5  list       ┃ Convert all passwords in a wordlist MD5 hashes                                         │
+  │ C  ┃ encode sha1 list       ┃ Convert all passwords in a wordlist into SHA1 hashes                                   │
+  │ C  ┃ encode sha256 list     ┃ Convert all passwords in a wordlist into SHA256 hashes                                 │
+  │ C  ┃ encode sha512 list     ┃ Convert all passwords in a wordlist into SHA512 hashes                                 │
+  │ C  ┃ encode base64 list     ┃ Convert all passwords in a wordlist into base64 strings                                │
+  │ C  ┃ encode base32 list     ┃ Convert all passwords in a wordlist into base32 strings                                │
+  │ C  ┃ encode rot13           ┃ Encode a string in ROT13                                                               │
+  │ C  ┃ encode HMAC            ┃ Encode a string with a key in HMAC                                                     │
+  │ C  ┃ run RR6 GUI            ┃ Run the RR6 GUI for image injection, OUI tracing and more                              │
+  │ C  ┃ run RR6 scan gui       ┃ Run the RR6 scan GUI for network recon compiles all PING commands in a GUI             │
+  │ C  ┃ Brute SMTP             ┃ Brute force SMTP services and emails                                                   │
+  │ C  ┃ Brute SSH              ┃ Brute force SSH Servers and usernames                                                  │
+  │ C  ┃ Brute FTP              ┃ Brute force FTP servers and usernames                                                  │
+  │ C  ┃ Brute HTTPA            ┃ Brute force HTTP plain authentication                                                  │
+  │ C  ┃ Brute Telnet           ┃ Brute force TELNET servers using std auth                                              │ 
+  │ C  ┃ Brute Cpan             ┃ Brute force Cpanel servers using std auth                                              │
+  │ C  ┃ sniff interfaces       ┃ Scan for interfaces on the current machine                                             │ 
+  │ C  ┃ sniff tcp              ┃ Sniff all incoming TCP packets that are picked up                                      │ 
+  │ C  ┃ sniff ip               ┃ Sniff all IP packets that are picked up                                                │ 
+  │ C  ┃ sniff dhcp             ┃ Sniff all DHCP packets that come through ( might be a buggy output fixing)             │ 
+  │ C  ┃ sniff application      ┃ Sniff all application like packets like Multicast Query Response                       │ 
+  │ C  ┃ sniff ethernet         ┃ Sniff all Ethernet packets that are picked up on a interface                           │
+  │ C  ┃ check proton ip        ┃ Check if a IP address belongs to a proton mail IP server                               │
+  │ C  ┃ check proton email     ┃ Check if a email address belongs to a proton mail account                              │
+  │ C  ┃ check cloudflare ip    ┃ Check if a given IPv6 or IPv4 address belongs to the cloudflare CIDR maps              │
+  │ C  ┃ check cloudfront ip    ┃ Check if a given IPv6 or IPv4 address belongs to the cloudfront CIDRs                  │
+  │ C  ┃ check mcafe ip         ┃ Check if a given IPv6 or IPv4 address belongs to the Mcafe CIDRs                       │
+  │ C  ┃ check aws ip           ┃ Check if a given IPv6 or IPv4 address belongs to the AWS CIDRs                         │
+  │ C  ┃ check myip             ┃ Check for your public IP address                                                       │
+  │ C  ┃ check number           ┃ Check a number hash EX(+381-##-###-####) and try to get information                    │
+  │ C  ┃ check number us        ┃ Check a number code EX(320) and get city, state, currency etc                          │
+  │ C  ┃ check number be        ┃ Check a number hash EX(+32(2)###-##-##) and get city, country, country currency etc    │
+  │ C  ┃ trace number us        ┃ Check a US number for information and data                                             │
+  │ C  ┃ trace ip               ┃ Check an IP's geo location using an API URL                                            │
+  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+```
 
