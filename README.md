@@ -267,3 +267,83 @@ Currently red rabbit only works on linux systems, the reason being alot of this 
 # Future Development 
 
 As the project goes on, I plan to add more and more utilities while also optimizing alot more of the code and adding new web interfaces and databases to the project. the plans for version 6.5 (Soon to be after version 6) will be abour an extra 37 tools added to the list, the use of a more interactive web UI, databases like mongodb to manage user sessions, and more data loggers and user freindly web UI adding more flags and cofiguration files. currently there is two config files one which is used for SSH attacks and management, and one for shodan and DOMXSS API keys, later on as said i plan to add more config files for the user to impliment into red rabbit topre set stuff like defualt username lists, defualt hash lists, defualt password lists, defualt payload and etc basically anything that we can add to make the user experience alot better.
+
+# Flags 
+
+There are alot of flags to this program, some of them you will need for certian commands, others you will need for certian attacks, file parsing, injectable files, process injection, etc etc the list goes on so here is a list of all the flags
+
+```go
+
+flags.StringVar(&rr6f.Pheight, "ph", "1200", "Set the pixel height for stego functions")
+	flags.StringVar(&rr6f.Pwidth, "pw", "800", "Set the pixel width for stego functions")
+	flags.StringVarP(&rr6f.Jpgchunk, "jpgc", "p", "COM", "Set a location or chunk to inject data into a JPG image")
+	flags.StringVarP(&rr6f.Screen_rotation, "reso", "v", "verticle", "Set the display rotation type <Verticle|Landscape|> For banner type")
+	flags.StringVarP(&rr6f.Input, "input", "i", "", "Path to the original image file")
+	flags.StringVarP(&rr6f.Output, "output", "o", "", "Path to output the new image file")
+	flags.BoolVarP(&rr6f.S_M, "meta", "m", false, "Display the actual image meta details")
+	flags.BoolVarP(&rr6f.Suppress, "suppress", "s", false, "Suppress the chunk hex data (can be large)")
+	flags.StringVar(&rr6f.Image_offset, "offset", "", "The offset location to initiate data injection")
+	flags.BoolVar(&rr6f.Inject, "inject", false, "Enable this to inject data at the offset location specified")
+	flags.StringVar(&rr6f.Payload, "payload", "", "Payload is data that will be read as a byte stream")
+	flags.StringVar(&rr6f.Type, "type", "rNDm", "Type is the name of the Chunk header to inject")
+	flags.StringVar(&rr6f.Key, "key", "", "The enryption key for payload")
+	flags.BoolVar(&rr6f.Payload_Encode, "encode", false, "XOR encode the payload")
+	flags.BoolVar(&rr6f.Payload_Decode, "decode", false, "XOR decode the payload")
+	flags.BoolVar(&rr6f.Extract_ZIP, "JPGEXTRACT", false, "Scan for ZIP files and extract them from images | JPEG FORMAT ONLY")
+	flags.BoolVar(&rr6f.INJECT_ZIP, "JPGINJECT", false, " Start / Activate ZIP file injection")
+	flags.StringVar(&rr6f.Filepath_general, "filepath", "", "path to the ZIP FILE")
+	flags.BoolVar(&rr6f.Hexdump, "hexd", false, "Hex dump a image")
+	flags.BoolVar(&rr6f.Geo, "geo", false, "Get the GEO location of a JPG/JPEG Info, of which has GPS location ")
+	flags.BoolVar(&rr6f.Walk, "walk", false, "Walk a filepath for images and EXIF dump all data to all images")
+	flags.BoolVar(&rr6f.Walkerfp, "walkf", false, "Walk a filepath for images")
+	flags.BoolVar(&rr6f.Discover, "discover", false, "Determin the type of file of an unknown file")
+	flags.StringVar(&rr6f.Hashlist, "hashl", "", "Set a hash list for hash brute forcing")
+	flags.StringVar(&rr6f.Userlist, "userl", "", "Set a user list for user brute forcing")
+	flags.StringVar(&rr6f.Brute_list, "wordl", "/usr/share/wordlists/rockyou.txt", "Set a wordlist for brute forcing")
+	flags.IntVar(&rr6f.Workers, "workers", 200, "Set the amount of workers for brute forcing -> defualt 200")
+	flags.StringVarP(&rr6f.Packet_t, "packet", "", "", "")
+	flags.StringVarP(&rr6f.Sniffc, "interface", "", "", "")
+	flags.StringVarP(&rr6f.Target_mac, "targetm", "", "", "Set the target's mac address for arp poisoning")
+	flags.StringVarP(&rr6f.Target_spoof, "targetip", "", "", "Gateway IP address")
+	flags.StringVarP(&rr6f.Gateway_mac, "gatemac", "", "", "Set the targets gateway mac for arp poisoning")
+	flags.StringVarP(&rr6f.Iprange, "CIDR", "z", "192.168.1.8/24", "Set a Network or IP range to scan for hosts")
+	flags.IntVar(&rr6f.Pass_length, "passlen", 16, "Set a password length for pass generation")
+	flags.StringVar(&rr6f.Per_mode, "perm", "", "Set the premissions of a file for permission stomper / changing")
+	flags.StringVar(&rr6f.Url, "target", "", "Set the target url for testig or injecting or recon")
+	flags.StringVar(&rr6f.PayloadList, "payloadl", "", "Set a payload list for XSS, SQLI, Admin panel finding, vuln finding, recon, or subdomains")
+	flags.StringVarP(&rr6f.XML_file, "XMLF", "X", "", "Set a XML file for nmap parsing")
+	flags.StringVarP(&rr6f.JSON_file, "JSONF", "J", "", "Set a JSON file for parsing")
+	flags.StringVarP(&rr6f.XML_file, "PCAP", "P", "", "Set a PCAP file for parsing")
+```
+
+this is a beta version of the flag but all flags must start with `--` if you wanted to inject an image you would specify 
+
+```
+-i="filename.png" or --input="filename.png"
+```
+
+to specify the input image, now this does not apply to all flags and commands, some commands want you to have certian flags, that will be specified in a certian list. When running most commands if you do not parse a flag or use a flag you will not be warned and the program will not exit, oit will rather ask you for a input of whatever you are missing. example: if you wanted to parse a pcap file but did not specify the filepath you would then be asked for a path to a pcap file, if you did specify then it will continue on. 
+
+if you are using multiple flags it is highly suggested you use --flagname="variable needed for the flag" this prevents bugs, and some conlflitcing flags and paths in the script, note later on this will be changed. 
+
+here is what the flags will be mostly used for 
+
+```
+XMLF -> Used for XML parsing commands such as nmap xml output parsers 
+JSONF -> used for JSON file parsing like commands that may need a jsone fil as an input 
+PCAP -> used for PCAP file parsing like commands that will try to find user credentials in a pcap 
+payloadl -> payload file for vulnerability testing 
+target -> set a url for testing (this has not fully been implimented into every attack command yet)
+perm -> for post exploitation set or stomp the file premissions to what premission you want it 
+passlen -> when generating passwords you can set the password / string length 
+CIDR -> used for both scanning utilitis GUI and CLI attacks, this will be used to specify a network range to test or use
+workers -> set the amount of workers for brute forcing attacks or resource based attacks 
+wordl -> set a wordlist for brute forcing 
+userl -> set a username wordlist for brute forcing 
+hashl -> set a hash file for hash cracking / brute forcing 
+ph set the pixel height for new images 
+pw set the pixel width for new images 
+reso set the resolution for formatted output 
+supress will supress data on large outputs 
+interface will parse an interface for network attacks or network monitoring
+```
