@@ -329,21 +329,38 @@ if you are using multiple flags it is highly suggested you use --flagname="varia
 here is what the flags will be mostly used for 
 
 ```
-XMLF -> Used for XML parsing commands such as nmap xml output parsers 
-JSONF -> used for JSON file parsing like commands that may need a jsone fil as an input 
-PCAP -> used for PCAP file parsing like commands that will try to find user credentials in a pcap 
-payloadl -> payload file for vulnerability testing 
-target -> set a url for testing (this has not fully been implimented into every attack command yet)
-perm -> for post exploitation set or stomp the file premissions to what premission you want it 
-passlen -> when generating passwords you can set the password / string length 
-CIDR -> used for both scanning utilitis GUI and CLI attacks, this will be used to specify a network range to test or use
-workers -> set the amount of workers for brute forcing attacks or resource based attacks 
-wordl -> set a wordlist for brute forcing 
-userl -> set a username wordlist for brute forcing 
-hashl -> set a hash file for hash cracking / brute forcing 
-ph set the pixel height for new images 
-pw set the pixel width for new images 
-reso set the resolution for formatted output 
-supress will supress data on large outputs 
-interface will parse an interface for network attacks or network monitoring
+F = flag 
+C = command 
+ ┌────┳────────────────────┳─────────────────────────────────────────────────────────────────────────┐
+ │ F  ┃ --he  bool         ┃ General help on flags and commands                                      │
+ │ F  ┃ --hh  bool         ┃ General help on help commands                                           │
+ │ F  ┃ --help bool        ┃ General help on flags                                                   │
+ │ F  ┃ --ehelp bool       ┃ Advanced help on flags, commands, help commands, and some flag examples │
+ │ F  ┃ --ph int           ┃ Specify image / pixel height when injecting and reconstructing images   │
+ │ F  ┃ --pw int           ┃ Specify image / pixel width when injection and reconstructing images    │
+ │ F  ┃ --jpgF string      ┃ Set a chunk to inject a JPG image with COM is the main chunk            │
+ │ F  ┃ --reso string      ┃ Set a screen resolution <Verticle|Landscape|> for output format         │
+ │ F  ┃ --input string     ┃ Set a input file to be injected for stegonography / image injection     │
+ │ F  ┃ --output string    ┃ Set a output file or output filename for image manipulation             │
+ │ F  ┃ --offset string    ┃ Set a offset to be injected at for image injection / stegonography      │
+ │ F  ┃ --payload string   ┃ Set the payload to be used for image injection and other tests          │
+ │ F  ┃ --type string      ┃ Set the type of chunk to inject images at such as IEND                  │
+ │ F  ┃ --key string       ┃ Set the encryption key for payloads (--ehelp for examples )             │
+ │ F  ┃ --filepath string  ┃ Set the general filepath for any file that will be read or used         │
+ │ F  ┃ --hashl string     ┃ Set the file of hashes to be used for hash cracking                     │
+ │ F  ┃ --wordl string     ┃ Set the file of passwords to be used for brute forcing                  │
+ │ F  ┃ --userl string     ┃ Set the file of usernames to be used for brute forcing                  │
+ │ F  ┃ --workers int      ┃ Set the amount of go workers for brute force attacks                    │
+ │ F  ┃ --interface string ┃ Set the interface to use for network attacks and packet capture         │
+ │ F  ┃ --targetm string   ┃ Set the target's mac address for arp poisoning                          │
+ │ F  ┃ --targetip string  ┃ Set the target's ip address for arp poisoning                           │
+ │ F  ┃ --gatemac string   ┃ Set the target's gateway mac address for arp poisoning                  │
+ │ F  ┃ --CIDR / -z string ┃ Set the CIDR to be used for host pinging, scanning, and more            │
+ │ F  ┃ --passlen int      ┃ Set the length of a password string to be generated when making lists   │
+ │ F  ┃ --target string    ┃ Set the target URL to be set for web attacks such as SQLI, XSS, etc     │
+ │ F  ┃ --payloadl string  ┃ Set the file of payloads to be used for XSS, SQLI, Admin panel's etc..  │
+ │ F  ┃ --XMLF string      ┃ Set the XML file for NMAP parsing, or other XML file parsing commands   │
+ │ F  ┃ --JSONF string     ┃ Set the JSON file for commands that need to parse certian JSON files    │
+ │ F  ┃ --PCAP  string     ┃ Set the PCAP file for parsing, this is not used as much as --filepath   │  
 ```
+
