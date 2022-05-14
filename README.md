@@ -364,3 +364,18 @@ C = command
  │ F  ┃ --PCAP  string     ┃ Set the PCAP file for parsing, this is not used as much as --filepath   │  
 ```
 
+As said previously some flags are not put into certian commands this is for a specific reason. 
+
+# Dev notes 
+
+Red Rabbit is a very very large project, and will continue to advance; however as it tends to advance the more bugs and issues that will come up. I will continue to try and fix as many of these issues which will rely in most operating system, hardware support, configuration, and setting / API module paths. The reason some of these may take longer than usual is due to the intense development time that is needed to go behind these modules especially given I would like to make them stronger over time. 
+
+> Previous Releases and notes from others
+
+Now as red rabbit has been released i have gotten many request's to do certian things to the project and jave even done polls on both discord and instagram to see what people would prefer which resulted in the following data 
+
+| the following is a list of all things recomended or suggested by a certian % of people
+
+```
+
+```
