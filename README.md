@@ -374,8 +374,40 @@ Red Rabbit is a very very large project, and will continue to advance; however a
 
 Now as red rabbit has been released i have gotten many request's to do certian things to the project and jave even done polls on both discord and instagram to see what people would prefer which resulted in the following data 
 
-| the following is a list of all things recomended or suggested by a certian % of people
+**the following is a list of all things recomended or suggested by a certian % of people**
 
 ```
-
+Make it a terminal like MSF rather than a menu with controls 
+Support for windows and other operating systems 
+Support for turmux 
+Support for Low end hardware 
+Cut down on the languages being used 
+Use offline databases 
+Use go workers and threads for better and faster speeds preventing errors
+instead of exiting on error return back to the terminal 
+instead of mashing it into one file make it have seperate modules for better scripting 
+use more types and functions to automate things that are used often such as if err != nil { log.Fatal(err)} which becomes its own package 
+add the option to format the output 
+add the option to parse your own data in the output / parsing of files 
+add the option to have the user set certian data 
+eleminate the exit if the command is wrong 
+change options, as options and commands are wacky instead of SQLF=test change it to test SQLI
+chnage the flag names and usages
+chnge the help menus 
+tighten up the documentation
+make files more spread out instead of mashing them all into one 
+clean up main branch of the Red Rabbit directory
+[...]
 ```
+
+Now that i have gathered a list of what people wanted i decided to make my own list of what i thought fit better and thanks to yall supporters of the project and beta testers i was able to take your advice and fix much in the script and add / remove functions for the better. I have fixed alot, when it comes to file parsing, databases, modules, and the main branch i hav been able to set everything in its own seperate file making for a cleaner organization of the project and large import paths. I also took away alot of the errors that would cause the user to have to re run the script in order for it to be used, functions such as exiting when a command is not correct have been removed and will tell the user if the command was not correct or if a syntax error was found in the command the user was trying to run, functions like parsing your own paramaters for file / pcap / nmap xml file parsing have been addd to allow the user to feel more at home and in control of the scripts functions / output 
+
+> Major changes
+
+A major change was the install file, hardware support, resource splitting, and operating system chan's to start threads or look for sigs like SIGINT, SIGKILL, SIGSEV, etc. All of these major changes have helped te growth of the red rabbit project for a while now and will continue to do so, you may b asking why does this matter in a simple command line interface script? Well the cold hard truth is despite this script being quite small in early versions like beta it would eat up your CPU, and hog your GPU during even the smallest of cryptography attacks. Adding hardware support, resource splitting, and system chans allow the user to specify how much resources they need to or want to use for a certian attack, and also prevent SIGSEV or PANIC errors from go, such as incorrect / false EOF errors, or errors that will give you issues with hardware interacting. Someone came to me when testing version 5 / beta version 5 and told me they had a massoive issue, that issue was whenever they would open up red rabbit or run the main.rb script they would get a load of errors and their PC would crash; This was a MASSIVE issue and i needed to figure it which came to be that i was using WAY to much if then statements in one file and should not even had used that much if statements.
+
+In order to solve this errors i ended up switching red rabbits entire code base from ruby to perl and go, the reason i chose these languages for such intnse tasks is because threading, os chans, and functions such as mathematical functions you have way more control over espescially given my skill range in both languages, i try as hard as i can to make this project worth everyones time even if that means I have ti switch this projects entire code base to make this better. Speaking on the language change the hardware support / os support was not the main reason I have decied to switch to new languages, the things i was looking to add to the very very first version of red rabbit needed a language that could support data types, handle data types, and is very very respectful of types and structures hence golang. 
+
+Ruby is a great language but i did not plan on advancing in ruby given the fact that i didnt see it as a language that could make complex mathematics and structure parsing easy instead rather harder than using something like golang or perl would be. I personally also felt that switching the language to go and perl was alot easier than just using the system command in ruby to run files and tools written in perl and go, this way it allows for much more of a smoother user experience bing that the code is way more optimized, built into modules, packages, libraries made for the red rabbit project, are local, are stored and individually imported, and do not depend on github or the system to run them, scripts built in perl have their own module written in golang to call the sys to run them however in the future this will be chnaged.
+
+Alot of changes have been made to this project and i certianly hope they turn out well, dont forget if you do find a massive bug in red rabbit please report it or message it to me either in the discord or my instagram or even here under this repo so other people can see updates on it
