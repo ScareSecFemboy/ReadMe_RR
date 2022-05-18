@@ -439,3 +439,22 @@ Now i have been going a bit off topic, for the most part in the future espcially
 Alot of people since the version .5 release have asked me if I would impliment or eventually impliment plugins in languages like LUA. The cold simple answer is no but that is not 100% a full answer that has been decided on yet, as I just said above I would like the user to have as much control over the script as possible. In order to properly live up to that I would need to impliment the use of allowing users to add plugins, however I would like this project to remain un touched for a bit. While I do believe that this would make red rabbit much more than just a different framework I think it would be best for it to ride for a bit and really settle into the hacker space first before I decide to impliment more plugins and more functions to allow the user to add their own programs or ideas into the script.
 
 Before this project chooses to impliment major changes such as plugin support there should be alot more users that use this program simply just because it would make people happier along the way.
+
+
+# Modules
+
+In red rabbit I decided to impliment module names, so say you want to do recon on a webserver that module to do said topic would be `search` the search module calls all commands for web or host recon, this helps organize the options alot and the menus, if you take a look at the old menu you can see that it has wacky commands such as the following. 
+
+```
+|-> D-Cow      | Run the dirty Cow EXPLOIT for file privlege escalation                    |Working |
+|-> ver-ip     | Verify if an IP string is correct ( uses regex )                          |Working |
+|-> web_view   | View my welcome and thank you page for the helpers of this project        |Working |
+|-> .env-v     | Test a list of urls for a .env file extension                             |Working |
+|-> loc-dos    | Run a local DOSSING script                                                |Working |
+```
+
+which really for a user makes it very hard to use and just horrid to look at, even the descriptions werent the best so with a modified menu and the use of module terms such as `help` `search` `parse` `stalk` `atk` etc it makes the user more prone to remmebering which command does what without the use of help menus and settings or comnfiguration files to set the functions to the commands. anytime you do need help on a specific module type `help` then the module name, if you need to output all modules then do `help modules *` which will specify modules and * which stands for all, this will output a list of all current modules. Another thing speaking on modules and specifying all is going to be the end use of `*`.
+
+During the development of the red rabbit project I wanted users to interact with all utilities as once, so do this on most large modules such as web recon, file parsing, pcap parsing, network capture, or network attacks I decided to embed the use of `*` this makes it easier on the user rather than specifying a command like `search modules all ` where you can just do `search *` which will run all search utilities with 3 inputs possibly 4, and later on will even be able to be used with config files. Its example usage would be as follows, say you need to run an extreme recon on a website but you do not want to specify `search function` where function would be replaced with something like `mx` then you can specify `search *` which will run all search utilities on the server and attempt to log and grab as much information as possible on the server you are looking at.
+
+see how much easier that was than doing every search individually? 
