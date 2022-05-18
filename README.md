@@ -50,7 +50,7 @@ This project has alot to offer especially when it comes to offensive cyber secur
 
 > Tool sets and variety: as said about two times now this project features a wide variety of utilities in topics or fields of hacking like Stegonography, Wifi attacks, Brute forcing, Hash brute forcing, Service fuzzing, Network fuzzing, metadata and file forensics, Offline password attacks, Offline OSINT, Online OSINT, web recon, host discovery, port scanning, system automation, system handeling, and well built commands to view certian things on your system such as ranges of IP's and Interfaces as well as connected addresses.
 
-# Getting more iformation on red rabbits functionality, utilities, and commands
+# Getting more information on red rabbits functionality, utilities, and commands
 
 Before i start this section i would like to say something that ALOT of people missed in the pre alpha version, in red rabbit version 1.0 there is a command called `start document server` which means it will start the offical red rabbit web server, once it starts the server you will be brought to this window on `localhost:8080` 
 
@@ -467,3 +467,18 @@ I have been asked this alot along with some other things, some people around 15+
 Alot of corperations will use professional tools that charge up to thousands of dollars for a simple web interface to test their applications. While I certianly am not in it for the money i am in it to advane red rabbit and make it into a corperate level program that can be used by many corperations to test their applications. It also makes the script way way more easier to use since web UI's can practically automate everything. The Reason we wont be going pro is because we do not think its eithical to make a program like red rabbit in its development state a binary and sell it cause it simply is not worth it. When I decide I should end up making web interfaces for the tool that might be when pro version starts to come out but even then it will be very easy to pay for, it wont be asking for nothing but a few bucks at most for buy. 
 
 Another main reason even if I wanted to make a pro version of red rabbit I really could not due to the unsupported platforms, alot of major corperations will have systems like windows or mac etc and right now red rabbit has really only been tested on parrot os and Arch linux, so before I cn even consider making it corperate level I would have to first impliment multi / cross platform support as well as adding alot more utilities and user customization and web interfaces or nicer GUI's.
+
+
+# Why use the utilities in red rabbit over the tools on linux?
+
+Red rabbit as said a bit ago picks out the mistakes people make in their programs and makes them better, alot of tools like web recon tools, or genral system utilities I felt and many others felt dont have the most readable or advanced output. Noone needs advanced output for a split second of looking something up but if you want to dig into things more it is best that you have formatted output and a bit of a faster response time rather than hanging for a good few seconds before outputting information. A primary reason to use red rabbits utilities is going to be for the response time, the output, and the detials of the output, something like search iface info * will give you some decently detailed information about your interfaces and the devbice information on the fly.
+
+# Conclusion 
+
+This program is not the best and certianly could not top something like metasploit however i have alot of hope that it will as it continues to develop it becomes bigger and becomes more advanced and robust, the more it keeps advancing the more tools and utilities are added. I would like to start implimenting the use of injection utilities, reverse shells and much more attack based utilities into the script, it does not have much powerful attacks since it only has stuff like RFI, LFI, SQL, XSS, SSH, FTP, NET, and simple service exploitation or based attacks, despite it having loads of tools it does not consist much of programs to attack a target and more to gain information or to parse through output files quickly.
+
+I wish anyone who uses this project luck, and certianly hope that it helps them in their road or time in the cyber security field because this project might just be the next generation attack/recon framework, I currently cant say red rabbit is a specific tool cause it isnt, it simply aims to be completely different and aims to be a script that tocuhed or touches on all fields of cyber security such as digital forensics, stegonography, web attacks, wifi attacks, network recon, host discovery, host finding, database testing, cloud pentesting, and so much more above that list.
+
+The reason for this being it just is not your average facebook hacking framework, its not your everyday script, your everyday SQL injection to or your daily "facebook hacking" tool, it is a REAL framework with REAL utilities and an authentic database that hold information to trace numbers, OUIS, MACS, even the simple locations it can trace and databses to build off of projects I impliment into its source. This framework is going to live up to its name as next generation and will continue to strive to be that framework, and as a developer I am certianly happy you chose us and chose red rabbit as your daily to use tool! 
+
+I know that was a bit shitty but dont take it as my personality, I do thank really everyone for the use of my tool especially such a massive one like this one is. 
