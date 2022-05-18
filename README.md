@@ -433,3 +433,9 @@ Config files such as yaml in languages like golang become super super easy to pa
 
 Now i have been going a bit off topic, for the most part in the future espcially version 1.5 i will be releasing more commands but alot more features to those commands, allow users to even use and parse their on YAML files or XML or even JSON files more than they already can, right now alot of that is still in tsting and needs to be worked on despite working. However my aim with this is to give the end user full control over everything that happens in the script such as settings, outout and input, output colors, errors, responses, texts, and even adding LUA plugins for red rabbit which will be implimented into the configuration release. 
 
+
+# Possible plugin implimentation 
+
+Alot of people since the version .5 release have asked me if I would impliment or eventually impliment plugins in languages like LUA. The cold simple answer is no but that is not 100% a full answer that has been decided on yet, as I just said above I would like the user to have as much control over the script as possible. In order to properly live up to that I would need to impliment the use of allowing users to add plugins, however I would like this project to remain un touched for a bit. While I do believe that this would make red rabbit much more than just a different framework I think it would be best for it to ride for a bit and really settle into the hacker space first before I decide to impliment more plugins and more functions to allow the user to add their own programs or ideas into the script.
+
+Before this project chooses to impliment major changes such as plugin support there should be alot more users that use this program simply just because it would make people happier along the way.
