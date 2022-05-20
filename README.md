@@ -240,6 +240,17 @@ cp: cannot create regular file '/usr/share/perl5/BRUTE.pm': Permission denied
 
 all libraries and installs are absolutely mandatory
 
+# Installing per OS 
+
+Note with the way the perl modules and my own modules need to be installed they are set to a very specific perl path, so if you are on a system like debian you need to specify the makefiles function then the OS type as follows
+
+`sudo perl Makefile.pl install arch`
+
+this command will install every needed module for this script, the reason the files need to be installed in a perl specific directory is because of perls @INC paths 
+
+if you are on debian specify `install debian` if you are on arch specify `arch`
+
+NOTE: You must be on one of those two systems for red rabbit to properly install, this is due to the fact that there is no current option to add a subsystem which will auto install everything despite the OS. If you do not specify a correct OS installs will NOT continue and the script will exit claiming a fatal error.
 
 # Sub information 
 
