@@ -433,6 +433,17 @@ Config files such as yaml in languages like golang become super super easy to pa
 
 Now i have been going a bit off topic, for the most part in the future espcially version 1.5 i will be releasing more commands but alot more features to those commands, allow users to even use and parse their on YAML files or XML or even JSON files more than they already can, right now alot of that is still in tsting and needs to be worked on despite working. However my aim with this is to give the end user full control over everything that happens in the script such as settings, outout and input, output colors, errors, responses, texts, and even adding LUA plugins for red rabbit which will be implimented into the configuration release. 
 
+# Configurating the input output of red rabbit 
+
+This is something new I have been looking to implimenting for a while, is to allow the user to manually configurate how the input and output terminal works, this is currently still in tetsing but there is one option that you can configure, in the filepath config/io you will find a file named IO-Settings.YAML which will look like this 
+
+```yaml
+
+IO-Setting:
+	Clear_On_Command: false 
+```
+
+when you install the script this will be set to false, you can set this to true if you want to clear the screen after every command. Which is basically what this does is every time you input a command will clear the screen when you set that value to true.
 
 # Possible plugin implimentation 
 
